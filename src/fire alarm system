@@ -1,0 +1,20 @@
+int firesensor; 
+int buzzer = 7;
+ void setup()
+ {
+ pinMode(A1, INPUT);
+ pinMode(buzzer, OUTPUT); 
+Serial.begin(9600);
+ }
+ void loop() 
+{
+ firesensor = analogRead(A1); 
+if(firesensor<900)
+ {
+ digitalWrite(buzzer, HIGH);
+ }
+ Else
+ {
+ digitalWrite(buzzer, LOW); 
+}
+ }
